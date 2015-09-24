@@ -1,0 +1,8 @@
+#!/bin/bash
+set -x
+exec start-stop-daemon \
+  --start \
+  --chuid mattermost \
+  --chdir /mattermost/bin \
+  --exec /mattermost/bin/platform \
+  -- -config=/data/config.json "$@"
