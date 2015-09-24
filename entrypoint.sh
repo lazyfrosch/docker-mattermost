@@ -42,9 +42,14 @@ fi
 
 if [ "$DATABASE_DSN" ]; then
   ds="SqlSettings.DataSource"
-  if [ `get_config "$ds"` != "$DATABASE_DSN" ]; then
+  if [ "`get_config "$ds"`" != "$DATABASE_DSN" ]; then
     echo "Updating database DSN..."
-    set_config "SqlSettings.DataSource" "'$DATABASE_DSN'"
+    set_config "$ds" "'$DATABASE_DSN'"
+  fi
+  dr="SqlSettings.DataSourceReplicas"
+  if [ "`get_config "$dr[0]"`" != "$DATABASE_DSN" ]; then
+    echo "Updating database DSN in replicas..."
+    set_config "$dr[0]" "'$DATABASE_DSN'"
   fi
 fi
 
