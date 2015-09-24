@@ -33,4 +33,4 @@ ADD mattermost /usr/local/bin/
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["mattermost"]
 
-EXPOSE 80
+EXPOSE 8080
