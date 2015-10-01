@@ -1,4 +1,4 @@
-mattermost for Docker
+Mattermost for Docker
 =====================
 
 Docker container for [Mattermost](http://www.mattermost.org).
@@ -40,7 +40,7 @@ Feel free to change `/data/config.json`, but be **careful**.
 
 All local filesystem data will be stored in `/data/storage`, while the logs get written to `/data/logs`.
 
-After the entrypoint is done, mattermost itself will run under a non-privileged user `mattermost`. See [mattermost](mattermost) script, which is the default CMD.
+After the entrypoint is done, Mattermost itself will run under a non-privileged user `mattermost`. See [mattermost](mattermost) script, which is the default CMD.
 
 ## License
 
